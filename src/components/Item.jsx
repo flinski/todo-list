@@ -1,14 +1,16 @@
 import styles from "./Item.module.scss";
 
-export default function Item({ item, onDeleteItem }) {
+export default function Item({ item, onToggleItem, onDeleteItem }) {
 	return (
 		<li className={styles.item}>
-			<input
-				className={`${styles.input} ${item.checked ? "checked" : ""}`}
-				type="text"
-				disabled={true}
-				value={item.title}
-			/>
+			<div className={styles.inputWrapper} onClick={() => onToggleItem(item.id)}>
+				<input
+					className={`${styles.input} ${item.checked ? "checked" : ""}`}
+					type="text"
+					disabled={true}
+					value={item.title}
+				/>
+			</div>
 			<button className={styles.btnEdit} type="button">
 				Edit
 			</button>

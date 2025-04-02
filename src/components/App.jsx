@@ -18,6 +18,10 @@ export default function App() {
 		setItems((curItems) => curItems.filter((item) => item.id !== id));
 	}
 
+	function handleToggleItem(id) {
+		setItems((curItems) => curItems.map((item) => (item.id === id ? { ...item, checked: !item.checked } : item)));
+	}
+
 	return (
 		<Container>
 			<Layout>
@@ -25,7 +29,7 @@ export default function App() {
 				<Form onAddItem={handleAddItem} />
 				<List>
 					{items.map((item) => (
-						<Item key={item.id} item={item} onDeleteItem={handleDeleteItem} />
+						<Item key={item.id} item={item} onToggleItem={handleToggleItem} onDeleteItem={handleDeleteItem} />
 					))}
 				</List>
 			</Layout>
