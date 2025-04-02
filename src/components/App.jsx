@@ -22,6 +22,10 @@ export default function App() {
 		setItems((curItems) => curItems.map((item) => (item.id === id ? { ...item, checked: !item.checked } : item)));
 	}
 
+	function handleEditItem(id, newTitle) {
+		setItems((curItems) => curItems.map((item) => (item.id === id ? { ...item, title: newTitle } : item)));
+	}
+
 	return (
 		<Container>
 			<Layout>
@@ -29,7 +33,13 @@ export default function App() {
 				<Form onAddItem={handleAddItem} />
 				<List>
 					{items.map((item) => (
-						<Item key={item.id} item={item} onToggleItem={handleToggleItem} onDeleteItem={handleDeleteItem} />
+						<Item
+							key={item.id}
+							item={item}
+							onToggleItem={handleToggleItem}
+							onEditItem={handleEditItem}
+							onDeleteItem={handleDeleteItem}
+						/>
 					))}
 				</List>
 			</Layout>
