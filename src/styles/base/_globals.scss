@@ -43,8 +43,8 @@ body {
 // 	}
 // }
 
-// :focus-visible {
-// 	outline: to-rem(2) dashed var(--color-light);
-// 	outline-offset: to-rem(4);
-// 	transition-duration: 0s !important;
-// }
+:focus-visible {
+	outline: to-rem(2) dashed var(--color-text);
+	// outline-offset: to-rem(2);
+	transition-duration: 0s !important;
+}

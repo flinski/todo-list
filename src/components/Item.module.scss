@@ -4,7 +4,7 @@
 	display: flex;
 	// gap: to-rem(8);
 	border-radius: var(--border-radius);
-	overflow: hidden;
+	// overflow: hidden;
 
 	@include hover {
 		background-color: var(--color-bg);
