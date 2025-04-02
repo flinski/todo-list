@@ -1,7 +1,0 @@
-@use "../styles/helpers" as *;
-
-.list {
-	&:not(:last-child) {
-		margin-bottom: to-rem(24);
-	}
-}
