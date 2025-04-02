@@ -1,0 +1,11 @@
+@use "../styles/helpers" as *;
+
+.stats {
+	padding-inline: to-rem(16);
+	font-weight: 500;
+	text-align: right;
+
+	&:not(:last-child) {
+		margin-bottom: to-rem(8);
+	}
+}

@@ -15,7 +15,7 @@ export default function Form({ onAddItem }) {
 			return;
 		}
 		const newItem = {
-			id: crypto.randomUUID(),
+			id: String(new Date().getTime()),
 			title: title,
 			checked: false,
 		};
@@ -29,10 +29,13 @@ export default function Form({ onAddItem }) {
 				className={styles.input}
 				type="text"
 				placeholder="Add a task..."
+				size="1"
 				value={title}
 				onChange={handleChangeTitle}
 			/>
-			<button className={styles.btn}>Add</button>
+			<button className={styles.btn} type="submit">
+				Add
+			</button>
 		</form>
 	);
 }
