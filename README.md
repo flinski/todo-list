@@ -1,1 +1,1 @@
-Deploy: [To-Do List](https://flinski.github.io/todo-list/)
+[Demo](https://flinski.github.io/todo-list/)
