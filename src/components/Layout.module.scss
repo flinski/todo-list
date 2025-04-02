@@ -1,0 +1,8 @@
+@use "../styles/helpers" as *;
+
+.layout {
+	padding: to-rem(30);
+	background-color: var(--color-layout);
+	border-radius: var(--border-radius);
+	border: var(--border);
+}

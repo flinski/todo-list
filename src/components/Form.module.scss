@@ -1,0 +1,38 @@
+@use "../styles/helpers" as *;
+
+.form {
+	display: flex;
+	gap: to-rem(8);
+
+	&:not(:last-child) {
+		margin-bottom: to-rem(24);
+	}
+}
+
+.input {
+	flex-grow: 1;
+	height: to-rem(40);
+	padding-inline: to-rem(16);
+	background-color: var(--color-bg);
+	border-radius: var(--border-radius);
+	border: var(--border);
+
+	&:focus {
+		outline: none;
+	}
+
+	&::placeholder {
+		color: var(--color-text-alt);
+	}
+}
+
+.btn {
+	padding-inline: to-rem(16);
+	color: var(--color-layout);
+	background-color: var(--color-accent);
+	border-radius: var(--border-radius);
+
+	@include hover {
+		background-color: var(--color-accent-alt);
+	}
+}

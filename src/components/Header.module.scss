@@ -1,0 +1,12 @@
+@use "../styles/helpers" as *;
+
+.header {
+	font-size: to-rem(36);
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+
+	&:not(:last-child) {
+		margin-bottom: to-rem(24);
+	}
+}

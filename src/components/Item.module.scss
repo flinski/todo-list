@@ -1,0 +1,51 @@
+@use "../styles/helpers" as *;
+
+.item {
+	display: flex;
+	// gap: to-rem(8);
+	border-radius: var(--border-radius);
+	overflow: hidden;
+
+	@include hover {
+		background-color: var(--color-bg);
+	}
+}
+
+.input {
+	flex-grow: 1;
+	height: to-rem(40);
+	padding-inline: to-rem(16);
+	color: var(--color-text);
+	background-color: transparent;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&::placeholder {
+		color: var(--color-text-alt);
+	}
+}
+
+.btnEdit,
+.btnDelete {
+	padding-inline: to-rem(16);
+	color: var(--color-text);
+	background-color: transparent;
+	border-radius: var(--border-radius);
+}
+
+.btnEdit {
+	@include hover {
+		color: var(--color-layout);
+		background-color: var(--color-edit);
+	}
+}
+
+.btnDelete {
+	@include hover {
+		color: var(--color-layout);
+		background-color: var(--color-delete);
+	}
+}
