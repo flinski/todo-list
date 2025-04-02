@@ -9,7 +9,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"preview:host": "vite preview --host",
-		 "deploy": "gh-pages -d dist",
+		"deploy": "gh-pages -d dist",
 		"lint": "eslint .",
 		"prettier": "prettier --write ."
 	},
