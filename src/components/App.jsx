@@ -1,3 +1,4 @@
+import { useState } from "react";
 // components
 import Container from "./Container";
 import Form from "./Form";
@@ -7,15 +8,21 @@ import Layout from "./Layout";
 import List from "./List";
 
 export default function App() {
+	const [items, setItems] = useState([]);
+
+	function handleAddItem(newItem) {
+		setItems((curItems) => [...curItems, newItem]);
+	}
+
 	return (
 		<Container>
 			<Layout>
 				<Header />
-				<Form />
+				<Form onAddItem={handleAddItem} />
 				<List>
-					<Item />
-					<Item />
-					<Item />
+					{items.map((item) => (
+						<Item key={item.id} item={item} />
+					))}
 				</List>
 			</Layout>
 		</Container>

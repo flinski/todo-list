@@ -26,6 +26,11 @@
 	&::placeholder {
 		color: var(--color-text-alt);
 	}
+
+	&:global(.checked) {
+		color: var(--color-text-alt);
+		text-decoration: line-through;
+	}
 }
 
 .btnEdit,
