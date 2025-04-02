@@ -1,0 +1,50 @@
+@use "../helpers" as *;
+
+html {
+	height: 100%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 0;
+	// scrollbar-gutter: stable;
+
+	&.is-lock {
+		overflow: hidden !important;
+	}
+}
+
+body {
+	font-family: var(--font-family);
+	font-size: to-rem(18);
+	font-weight: 400;
+	line-height: 1;
+
+	color: var(--color-text);
+	background-color: var(--color-bg);
+}
+
+// a,
+// button,
+// label,
+// input,
+// textarea,
+// select,
+// svg * {
+// 	transition-duration: var(--transition-duration);
+// }
+
+// a {
+// 	color: inherit;
+
+// 	@include hover {
+// 		color: var(--color-accent);
+// 	}
+
+// 	&[class] {
+// 		text-decoration: none;
+// 	}
+// }
+
+// :focus-visible {
+// 	outline: to-rem(2) dashed var(--color-light);
+// 	outline-offset: to-rem(4);
+// 	transition-duration: 0s !important;
+// }

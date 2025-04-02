@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+:root {
+	--color-text: #000;
+	--color-bg: #fff;
+
+	--font-family: "Inter", sans-serif;
+
+	--container-width: #{to-rem(640)};
+	--container-padding-x: #{to-rem(20)};
+
+	--transition-duration: 0.2s;
+}

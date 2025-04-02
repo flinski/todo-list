@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+img,
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+}
+
+button,
+label {
+	cursor: pointer;
+}
+
+a {
+	display: inline-flex;
+}
+
+address {
+	font-style: normal;
+}
+
+table {
+	border-collapse: collapse;
+	border-color: currentColor;
+}
+
+svg [fill]:not([fill="none"], [fill^="url"]) {
+	fill: currentColor;
+}
+
+svg [stroke]:not([stroke="none"], [stroke^="url"]) {
+	stroke: currentColor;
+}
+
+svg * {
+	transition-property: fill, stroke;
+}
+
+// @media (prefers-reduced-motion: reduce) {
+//   *,
+//   ::before,
+//   ::after {
+//     animation-duration: 0.01ms !important;
+//     animation-iteration-count: 1 !important;
+//     transition-duration: 0.01ms !important;
+//     scroll-behavior: auto !important;
+//   }
+// }
