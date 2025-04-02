@@ -1,6 +1,6 @@
 import styles from "./Item.module.scss";
 
-export default function Item({ item }) {
+export default function Item({ item, onDeleteItem }) {
 	return (
 		<li className={styles.item}>
 			<input
@@ -9,8 +9,12 @@ export default function Item({ item }) {
 				disabled={true}
 				value={item.title}
 			/>
-			<button className={styles.btnEdit}>Edit</button>
-			<button className={styles.btnDelete}>Delete</button>
+			<button className={styles.btnEdit} type="button">
+				Edit
+			</button>
+			<button className={styles.btnDelete} type="button" onClick={() => onDeleteItem(item.id)}>
+				Delete
+			</button>
 		</li>
 	);
 }

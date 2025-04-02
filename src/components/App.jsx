@@ -14,6 +14,10 @@ export default function App() {
 		setItems((curItems) => [...curItems, newItem]);
 	}
 
+	function handleDeleteItem(id) {
+		setItems((curItems) => curItems.filter((item) => item.id !== id));
+	}
+
 	return (
 		<Container>
 			<Layout>
@@ -21,7 +25,7 @@ export default function App() {
 				<Form onAddItem={handleAddItem} />
 				<List>
 					{items.map((item) => (
-						<Item key={item.id} item={item} />
+						<Item key={item.id} item={item} onDeleteItem={handleDeleteItem} />
 					))}
 				</List>
 			</Layout>
